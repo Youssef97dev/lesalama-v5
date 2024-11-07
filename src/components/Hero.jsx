@@ -29,14 +29,14 @@ const Hero = () => {
         className="absolute w-full flex justify-center items-center top-20"
       >
         <Image
-          src="/icons/logo-salama-humberger-brown.png"
+          src="/icons/logo-salama-humberger-white.png"
           alt="le salama logo"
           width={200}
           height={200}
           className="cursor-pointer lg:hidden block"
         />
         <Image
-          src="/icons/logo-salama-humberger-brown.png"
+          src="/icons/logo-salama-humberger-white.png"
           alt="le salama logo"
           width={280}
           height={280}
