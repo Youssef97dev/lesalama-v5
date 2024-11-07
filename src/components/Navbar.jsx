@@ -13,17 +13,7 @@ const Navbar = () => {
     <>
       <nav className="fixed top-0 left-0 w-full z-30 bg-primary shadow-md px-5">
         <div className="w-full flex justify-end items-center p-2">
-          {/* Logo */}
-          <Link href="/" className="hidden">
-            <Image
-              src="/icons/logo-salama-white.png"
-              alt="le salama logo"
-              width={120}
-              height={120}
-              className="cursor-pointer w-[70%] h-[70%] md:w-full md:h-full"
-            />
-          </Link>
-          <div className="flex justify-center items-center ">
+          <div className="w-full flex justify-end lg:justify-between items-center ">
             {/* Book table button */}
             <div className="hidden md:block">
               <Link
@@ -34,58 +24,60 @@ const Navbar = () => {
                 Book a Table
               </Link>
             </div>
-            {/* Langue */}
-            <div
-              className="relative "
-              onMouseLeave={() => setIsDropdownOpen(false)}
-              onMouseEnter={() => setIsDropdownOpen(true)}
-            >
-              <button className="text-white px-4 py-2 flex justify-center items-center gap-2">
-                <img
-                  src="/icons/english.png"
-                  className="w-5 h-5 md:w-7 md:h-7"
-                />
-                <IoMdArrowDropdown size={18} />
-              </button>
-              {isDropdownOpen && (
-                <ul className="absolute top-8 bg-primary_9 mt-2 py-2 w-32 shadow-lg flex justify-center items-center">
-                  <li className="px-4 py-2 hover:bg-primary_3 rounded-lg cursor-pointer">
-                    <Link href="#">
-                      <img
-                        src="/icons/english.png"
-                        className="w-5 h-5 md:w-7 md:h-7"
-                      />
-                    </Link>
-                  </li>
-                  <li className="px-4 py-2 hover:bg-primary_3 rounded-lg cursor-pointer">
-                    <Link href="/fr">
-                      <img
-                        src="/icons/france.png"
-                        className="w-5 h-5 md:w-7 md:h-7"
-                      />
-                    </Link>
-                  </li>
-                </ul>
-              )}
-            </div>
-            {/* Menu Icon */}
-            <div className="">
-              <button onClick={() => setIsOpen(!isOpen)}>
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="#fff"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16m-7 6h7"
+            <div className="flex justify-center items-center ">
+              {/* Langue */}
+              <div
+                className="relative "
+                onMouseLeave={() => setIsDropdownOpen(false)}
+                onMouseEnter={() => setIsDropdownOpen(true)}
+              >
+                <button className="text-white px-4 py-2 flex justify-center items-center gap-2">
+                  <img
+                    src="/icons/english.png"
+                    className="w-5 h-5 md:w-7 md:h-7"
                   />
-                </svg>
-              </button>
+                  <IoMdArrowDropdown size={18} />
+                </button>
+                {isDropdownOpen && (
+                  <ul className="absolute top-8 bg-primary_9 mt-2 py-2 w-32 shadow-lg flex justify-center items-center">
+                    <li className="px-4 py-2 hover:bg-primary_3 rounded-lg cursor-pointer">
+                      <Link href="#">
+                        <img
+                          src="/icons/english.png"
+                          className="w-5 h-5 md:w-7 md:h-7"
+                        />
+                      </Link>
+                    </li>
+                    <li className="px-4 py-2 hover:bg-primary_3 rounded-lg cursor-pointer">
+                      <Link href="/fr">
+                        <img
+                          src="/icons/france.png"
+                          className="w-5 h-5 md:w-7 md:h-7"
+                        />
+                      </Link>
+                    </li>
+                  </ul>
+                )}
+              </div>
+              {/* Menu Icon */}
+              <div className="">
+                <button onClick={() => setIsOpen(!isOpen)}>
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="#fff"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4 6h16M4 12h16m-7 6h7"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -104,29 +96,20 @@ const Navbar = () => {
           <ul className="space-y-5 md:space-y-10 text-center text-white text-xl md:text-4xl font-medium">
             <li>
               <Link
-                href="#about"
+                href="/"
+                onClick={() => setIsOpen(!isOpen)}
+                className="hover:text-primary_2"
+              >
+                HOME
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/about"
                 onClick={() => setIsOpen(!isOpen)}
                 className="hover:text-primary_2"
               >
                 ABOUT
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#contact"
-                onClick={() => setIsOpen(!isOpen)}
-                className="hover:text-primary_2"
-              >
-                CONTACT
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#location"
-                onClick={() => setIsOpen(!isOpen)}
-                className="hover:text-primary_2"
-              >
-                LOCATION
               </Link>
             </li>
             <li>
