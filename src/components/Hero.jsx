@@ -29,22 +29,22 @@ const Hero = () => {
         className="absolute w-full flex justify-center items-center top-20"
       >
         <Image
-          src="/icons/logo-salama-white.png"
+          src="/icons/logo-salama-humberger-brown.png"
           alt="le salama logo"
-          width={280}
-          height={280}
+          width={200}
+          height={200}
           className="cursor-pointer lg:hidden block"
         />
         <Image
-          src="/icons/logo-salama-white.png"
+          src="/icons/logo-salama-humberger-brown.png"
           alt="le salama logo"
-          width={450}
-          height={450}
+          width={280}
+          height={280}
           className="cursor-pointer hidden lg:block"
         />
       </Link>
 
-      <div className="absolute h-full w-full font-light px-20 lg:px-[45rem] mt-5 flex flex-col justify-center items-center italic text-white text-lg space-y-6">
+      <div className="absolute h-full w-full font-light px-20 lg:px-[45rem] mt-24 flex flex-col justify-center items-center italic text-white text-lg space-y-6">
         <Link
           href="https://www.lesalamamarrakech.com/menu/lunch/"
           target="_blank"
